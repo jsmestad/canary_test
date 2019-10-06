@@ -10,7 +10,7 @@ module CanaryTest
       action_class = name.split('_').collect(&:capitalize).join
       action_klass = Object.const_get([self.name, action_class].join("::"))
     rescue NameError
-      abort("FAIL - Action `#{name}` does not match an available action.")
+      raise MissingActionError, "Action `#{name}` does not match an available action."
     end
   end
 end

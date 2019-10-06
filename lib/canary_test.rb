@@ -10,4 +10,5 @@ require "canary_test/logger"
 
 module CanaryTest
   class Error < StandardError; end
+  class MissingActionError < NameError; end
 end
