@@ -8,7 +8,7 @@ module CanaryTest
 
       def run
         FileUtils.rm(@file)
-        @logger.log({path: @file, action: "deleted", message: "File deleted at #{@file}"})
+        @logger.log(file: @file, action: "deleted", message: "File deleted at #{@file}")
       end
     end
   end

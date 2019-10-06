@@ -19,14 +19,14 @@ module CanaryTest
           request[:source_address] = sock.local_address.ip_address
           request[:source_port] = sock.local_address.ip_port
         end
-        @logger.log({
-                      bytes_recv: request[:received].bytesize,
-                      bytes_sent: @data.bytesize,
-                      dest_address: @host,
-                      dest_port: @port,
-                      source_address: request[:source_address],
-                      source_port: request[:source_port]
-                    })
+        @logger.log(
+          bytes_recv: request[:received].bytesize,
+          bytes_sent: @data.bytesize,
+          dest_address: @host,
+          dest_port: @port,
+          source_address: request[:source_address],
+          source_port: request[:source_port]
+        )
       end
     end
   end

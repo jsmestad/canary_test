@@ -7,9 +7,9 @@ module CanaryTest
       end
 
       def run
-        pid = spawn(@cmd)
+        pid = Process.spawn(@cmd)
         Process.detach(pid)
-        @logger.log({pid: pid, cmd: @cmd, action: "spawned", message: "Spawned process `#{@cmd}`"})
+        @logger.log(pid: pid, cmd: @cmd, action: 'spawned', message: "Spawned process `#{@cmd}`")
       end
     end
   end

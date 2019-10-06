@@ -8,7 +8,7 @@ module CanaryTest
 
       def run
         FileUtils.touch(@file)
-        @logger.log({file: @file, action: "modified", message: "File modified at #{@file}"})
+        @logger.log(file: @file, action: "modified", message: "File modified at #{@file}")
       end
     end
   end

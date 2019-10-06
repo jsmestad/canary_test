@@ -8,13 +8,7 @@ module CanaryTest
 
       def run
         File.write(@file, "")
-        @logger.log({file: @file, action: "created", message: "File created at #{@file}"})
-      end
-
-      def log(data = {})
-        data.merge!({
-          action: self.class.name.split('::').last
-        })
+        @logger.log(file: @file, action: "created", message: "File created at #{@file}")
       end
     end
   end
