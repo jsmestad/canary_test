@@ -12,8 +12,8 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-puts options[:config]
-configuration = CanaryTest::CLI.load_configuration_from_file(options[:config] ||= {})
+configuration = options[:config] ? CanaryTest::CLI.load_configuration_from_file(options[:config]) : {}
+
 CanaryTest::CLI.new(configuration).tap do |runner|
   runner.run!
 end

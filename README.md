@@ -2,7 +2,14 @@
 
 ## Installation
 
-    $ gem install canary_test
+This library has not been pushed to Rubygems so installation is a bit more involved.
+
+```bash
+git clone https://github.com/jsmestad/canary_test.git
+cd canary_test
+bundle install
+rake install
+```
 
 This is a command-line application, though it could be used inside another Ruby application.
 
