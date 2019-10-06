@@ -1,0 +1,12 @@
+---
+log_file: './tmp/canary_test.log'
+actions:
+  - file_creation
+  - file_deletion
+  - file_modification
+  - http_request
+  - process_creation
+file_path: './tmp/generated_foo.tmp'
+http_host: 'www.ruby-lang.org'
+http_port: 80
+process_cmd: 'ls -al'

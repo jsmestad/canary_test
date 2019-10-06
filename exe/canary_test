@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'canary_test'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: canary_test [options]"
+
+  opts.on("-c" "--config PATH_TO_FILE", "Load YAML configuration file") do |f|
+    options[:config] = f
+  end
+end.parse!
+
+puts options[:config]
+configuration = CanaryTest::CLI.load_configuration_from_file(options[:config] ||= {})
+CanaryTest::CLI.new(configuration).tap do |runner|
+  runner.run!
+end
