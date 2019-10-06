@@ -15,7 +15,7 @@ configuration options already set, but you are encouraged to change them.
 | :--         | :--                                                                                           | :--                                       |
 | log_file    | STDOUT                                                                                        | logger output target                      |
 | actions     | `['file_creation', 'file_deletion', 'file_modification', 'http_request', 'process_creation']` | list of test actions to perform           |
-| http_host   | 'www.ruby-lang.org'                                                                           | http host for `http_request` action       |
+| http_host   | `www.ruby-lang.org`                                                                           | http host for `http_request` action       |
 | http_port   | 80                                                                                            | http port for the `http_request` action   |
 | http_data   | `"GET / HTTP/1.0\r\nHost: www.ruby-lang.org\r\n\r\n"`                                                                                          | http data for the `http_request` action   |
 | file_path   | {current_directory} + `generated_file.tmp`                                                    | full file path for the `file_\*` actions  |
