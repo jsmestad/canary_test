@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A framework to emit various endpoint events for agent verification}
   spec.description   = %q{A framework to emit various endpoint events for agent verification}
-  spec.homepage      = "https://gitlab.com/jsmestad/canary_test"
+  spec.homepage      = "https://github.com/jsmestad/canary_test"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.
