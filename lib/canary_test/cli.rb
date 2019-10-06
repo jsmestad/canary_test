@@ -5,7 +5,7 @@ module CanaryTest
     attr_reader :configuration
 
     def self.load_configuration_from_file(config_file)
-      YAML::load_file(config_file)
+      YAML.load_file(config_file)
     end
 
     def initialize(config={})
