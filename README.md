@@ -38,6 +38,10 @@ canary_test                         # default configuration
 canary_test -c ~/my_runner.yml      # with configuration
 ```
 
+## Logging
+
+By default, logging will be printed in JSON format to STDOUT. You can use the configuration file above to send those log entries to a file.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
